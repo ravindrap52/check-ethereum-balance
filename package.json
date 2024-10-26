@@ -1,0 +1,83 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,ts,tsx,css,html,md,json}\" --ignore-path .gitignore",
+    "i18n": "i18nline synch",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@tanstack/react-query": "^5.59.16",
+    "@tanstack/react-query-devtools": "^5.59.16",
+    "@tatumio/tatum": "^4.2.0",
+    "@types/i18n": "^0.13.12",
+    "@types/react": "^18.3.12",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "i18nline": "^2.0.1",
+    "lucide-react": "^0.453.0",
+    "mongodb": "^3.0.0",
+    "preact": "^10.24.3",
+    "preact-i18nline": "^2.0.0",
+    "preact-iso": "^2.6.3",
+    "react-hook-form": "^7.53.1",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.1",
+    "@eslint/js": "^9.13.0",
+    "@preact/preset-vite": "^2.9.1",
+    "@tanstack/eslint-plugin-query": "^5.59.7",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/preact": "^3.2.4",
+    "@types/node": "^22.7.8",
+    "@types/react-query": "^1.2.9",
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.1",
+    "eslint-plugin-preact": "^0.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^15.11.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
+    "vite": "^5.4.9",
+    "vitest": "^2.1.3"
+  },
+  "i18n": {
+    "plugins": [
+      "preact-i18nline"
+    ],
+    "autoTranslateTags": [
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "p",
+      "div"
+    ]
+  }
+}
