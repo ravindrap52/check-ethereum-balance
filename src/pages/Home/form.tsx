@@ -11,7 +11,7 @@ import { FormChildProps } from '@/types/interface';
 
 type ethereumForm = z.infer<typeof ethereumFormSchema>;
 
-export function EthereumForm({ onSendData }: FormChildProps): h.JSX.Element {
+export function EthereumForm({ onSendData, isFetching }: FormChildProps): h.JSX.Element {
   const {
     control,
     handleSubmit,
@@ -54,8 +54,12 @@ export function EthereumForm({ onSendData }: FormChildProps): h.JSX.Element {
             </span>
           )}
         </div>
-        <Button className="bg-primary2 text-white p-2 rounded w-full cursor-pointer" type="submit">
-          Get Balance
+        <Button
+          disabled={isFetching}
+          className="bg-primary2 text-white p-2 rounded w-full cursor-pointer"
+          type="submit"
+        >
+          {isFetching ? 'Please wait...' : 'Get Balance'}
         </Button>
       </form>
     </div>

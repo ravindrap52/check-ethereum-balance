@@ -25,10 +25,9 @@ export function Home(): h.JSX.Element {
   const handleChildData = useCallback((data: FormData): void => {
     setEthereumAddress(data.ethereumAddress);
   }, []);
-
   return (
     <div class="flex flex-col max-w-md w-full">
-      <EthereumForm onSendData={handleChildData} />
+      <EthereumForm onSendData={handleChildData} isFetching={isFetching} />
       {(isLoading || isFetching) && <Skeleton className="h-4 w-full mt-4 bg-primary2" />}
       {error && <p class="mt-4 text-red-500">Error: {error.message || 'An error occurred'}</p>}
       {data && (

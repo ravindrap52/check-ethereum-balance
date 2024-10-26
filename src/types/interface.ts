@@ -11,6 +11,7 @@ export interface FormData {
 }
 
 export interface FormChildProps {
+  isFetching: boolean;
   onSendData: (data: FormData) => void;
 }
 
