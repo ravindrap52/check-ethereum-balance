@@ -6,7 +6,6 @@ import ReactHooks from 'eslint-plugin-react-hooks';
 import preact from 'eslint-plugin-preact';
 import unUsedImports from 'eslint-plugin-unused-imports';
 
-
 export default [
   {
     files: ['src/**/*.{js,ts,tsx}'],
@@ -57,7 +56,5 @@ export default [
       'prefer-promise-reject-errors': 'off',
       quotes: ['warn', 'single', { avoidEscape: true }],
     },
-    ignorePatterns: ['node_modules/', 'dist/', 'build/', 'logs/'],
-    includeIgnoreFile: true,
   },
 ];

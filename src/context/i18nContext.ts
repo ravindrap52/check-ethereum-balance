@@ -1,7 +1,6 @@
+import I18n from 'i18nline';
 import { createContext } from 'preact';
 import { useContext } from 'preact/hooks';
-
-import I18n from 'i18nline';
 
 interface I18n {
   locale: string;
@@ -10,7 +9,7 @@ interface I18n {
 
 export const I18nContext = createContext<I18n | undefined>(undefined);
 
-export function useI18nContext() {
+export function useI18nContext(): I18n {
   const i18nContext = useContext(I18nContext);
 
   if (i18nContext === undefined) {

@@ -7,7 +7,7 @@ export interface ImageProps {
 }
 
 export interface FormData {
-  [key:string]: string;
+  [key: string]: string;
 }
 
 export interface FormChildProps {

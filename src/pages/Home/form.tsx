@@ -1,15 +1,15 @@
 import { zodResolver } from '@hookform/resolvers/zod';
+import I18n from 'i18nline';
 import { h } from 'preact';
 import { SubmitHandler, useForm, Controller } from 'react-hook-form';
 import { z } from 'zod';
-import I18n from 'i18nline';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useI18nContext } from '@/context/i18nContext';
 import { ethereumFormSchema } from '@/lib/zodSchema';
 import { FormChildProps } from '@/types/interface';
-import { useI18nContext } from '@/context/i18nContext';
 
 type ethereumForm = z.infer<typeof ethereumFormSchema>;
 
@@ -40,7 +40,7 @@ export function EthereumForm({ onSendData, isFetching }: FormChildProps): h.JSX.
       <form onSubmit={handleSubmit(submitForm)}>
         <div class="mb-4">
           <Label htmlFor="ethereumAddress" className="text-right text-primary">
-          {I18n.translations[i18n.locale]['ethereumAddress']}
+            {I18n.translations[i18n.locale]['ethereumAddress']}
           </Label>
           <Controller
             name="ethereumAddress"
@@ -66,7 +66,9 @@ export function EthereumForm({ onSendData, isFetching }: FormChildProps): h.JSX.
           className="bg-primary2 text-white p-2 rounded w-full cursor-pointer"
           type="submit"
         >
-          {isFetching ? `${I18n.translations[i18n.locale]['pleaseWait']}` : `${I18n.translations[i18n.locale]['getBalance']}`}
+          {isFetching
+            ? `${I18n.translations[i18n.locale]['pleaseWait']}`
+            : `${I18n.translations[i18n.locale]['getBalance']}`}
         </Button>
       </form>
     </div>

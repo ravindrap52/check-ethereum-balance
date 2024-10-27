@@ -1,18 +1,17 @@
+import I18n from 'i18nline';
 import { h } from 'preact';
 
 import tatumLogo from '../assets/tatum.jpeg';
 import { Image } from '@/components/Image';
-import { loadLocale } from '@/i18n';
-import I18n from 'i18nline';
-import { useI18nContext } from '@/context/i18nContext';
-
 import { Button } from '@/components/ui/button';
+import { useI18nContext } from '@/context/i18nContext';
+import { loadLocale } from '@/i18n';
 
 // Header component to display the company logo
 export function Header(): h.JSX.Element {
   const i18n = useI18nContext();
 
-  const changeLocale = async (newLocale: string) => {
+  const changeLocale = async (newLocale: string): Promise<void> => {
     // loading the translation file for new locale
     const localeData = await loadLocale(newLocale);
     // setting in context

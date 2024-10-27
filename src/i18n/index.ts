@@ -1,6 +1,7 @@
 // localization.js
-import { defaultLocale, supportedLocales } from '@/lib/constansts';
 import I18n from 'preact-i18nline/i18n';
+
+import { defaultLocale, supportedLocales } from '@/lib/constansts';
 
 type LocaleData = Record<string, Record<string, string>>;
 

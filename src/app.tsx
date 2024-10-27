@@ -1,14 +1,14 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { h } from 'preact';
-import { LocationProvider, Router, Route, ErrorBoundary } from 'preact-iso';
-import { I18nContext } from '@/context/i18nContext';
 import I18n from 'i18nline';
+import { h } from 'preact';
+import { useState } from 'preact/hooks';
+import { LocationProvider, Router, Route, ErrorBoundary } from 'preact-iso';
 
+import { I18nContext } from '@/context/i18nContext';
 import { NotFound } from '@/pages/_404';
 import { Home } from '@/pages/Home/index';
 import { Layout } from '@/pages/Layout';
-import { useState } from 'preact/hooks';
 
 // creating a new instance of QueryClient for server state
 const queryClient = new QueryClient({
