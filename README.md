@@ -1,7 +1,49 @@
-## Getting Started
+# automation-builder
+A web application to get the ethereum balance based on ethereum address.
 
-- `npm run dev` - Starts a dev server at http://localhost:5173/
+## Libraries Used
 
-- `npm run build` - Builds for production, emitting to `dist/`
+### shadcn/ui
+I used shadcn/ui components for this project, as they come with Tailwind utility classes support and can be easily customized.
 
-- `npm run preview` - Starts a server at http://localhost:4173/ to test production build locally
+### Tanstack Query
+Utilized Tanstack Query for maintaining server-side state, allowing for cached API results. This ensures that repeated requests with the same data fetch results from the cache.
+
+### React Hook Form
+I utilized React Hook Form for form validation because it is lightweight and minimizes re-renders.
+
+### Zod
+I used Zod for validations.
+
+
+## Project Setup
+
+### Cloning the Repository
+To clone the repository, use the following command:
+```bash
+git https://github.com/ravindrap52/check-ethereum-balance.git
+```
+### Installation
+To install the dependencies, navigate into the project directory and run:
+```bash
+cd check-ethereum-balance
+npm install
+```
+### Running the Development Server
+To start the development server, run:
+```bash
+npm run dev
+```
+#### This will open the browser and navigate to http://localhost:5173.
+
+### Running the Tests
+To run the tests, execute:
+```bash
+npm run test
+```
+
+### Building for Production
+To build the project for production, use:
+```bash
+npm run build
+```
