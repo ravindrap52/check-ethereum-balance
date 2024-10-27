@@ -1,8 +1,14 @@
 {
   "en": {
     "formLabel": "Check Ethereum Balance",
-    "pleasewait": "Please wait...",
+    "pleaseWait": "Please wait...",
     "pageNotFoundMessage": "The page you're looking for doesn't exist or has been moved.",
-    "Page Not Found": "Page Not Found"
+    "pageNotFound": "Page Not Found",
+    "changeLanguage": "Change Language:",
+    "home": "Navigate Home",
+    "getBalance": "Get Balance",
+    "ethereumAddress": "Ethereum Address",
+    "currentBalance": "Your current balance is:",
+    "noBalance": "There is no balance available for this address."
   }
 }

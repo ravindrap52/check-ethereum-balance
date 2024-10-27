@@ -1,4 +1,5 @@
 import { AddressBalance } from '@tatumio/tatum';
+import I18n from 'i18nline';
 
 import { currencyMapping } from './currencyMapping';
 
@@ -27,7 +28,7 @@ export const getBalanceByAsset = (data: AddressBalance[], currency: string): str
       currency: currencyCode,
     }).format(balanceValue);
 
-    return `Your current balance is: ${formattedBalance}`;
+    return `${I18n.translations[I18n.locale]['currentBalance']} ${formattedBalance}`;
   }
-  return 'No balance available for this address.';
+  return `${I18n.translations[I18n.locale]['noBalance']}`;
 };

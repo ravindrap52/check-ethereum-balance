@@ -1,8 +1,14 @@
 {
   "de": {
-    "formLabel": "Ethereum-Guthaben überprüfen",
-    "pleasewait": "Bitte warten...",
+    "formLabel": "Ethereum-Guthaben prüfen",
+    "pleaseWait": "Bitte warten...",
     "pageNotFoundMessage": "Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.",
-    "Page Not Found": "Seite nicht gefunden"
+    "pageNotFound": "Seite nicht gefunden",
+    "changeLanguage": "Sprache ändern:",
+    "home": "Zur Startseite",
+    "getBalance": "Guthaben abrufen",
+    "ethereumAddress": "Ethereum-Adresse",
+    "currentBalance": "Ihr aktuelles Guthaben beträgt:",
+    "noBalance": "Für diese Adresse ist kein Guthaben verfügbar."
   }
 }

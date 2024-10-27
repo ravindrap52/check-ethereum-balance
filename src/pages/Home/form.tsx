@@ -14,7 +14,9 @@ import { useI18nContext } from '@/context/i18nContext';
 type ethereumForm = z.infer<typeof ethereumFormSchema>;
 
 export function EthereumForm({ onSendData, isFetching }: FormChildProps): h.JSX.Element {
-  const i18n = useI18nContext()
+  // i18n context
+  const i18n = useI18nContext();
+  // initiating the form
   const {
     control,
     handleSubmit,
@@ -25,18 +27,20 @@ export function EthereumForm({ onSendData, isFetching }: FormChildProps): h.JSX.
     },
     resolver: zodResolver(ethereumFormSchema),
   });
-
+  // submitting the form, and sending data to parent
   const submitForm: SubmitHandler<ethereumForm> = (data): void => {
     onSendData(data);
   };
 
   return (
     <div class="bg-white shadow-lg rounded-lg p-6">
-      <h2 class="text-2xl font-bold text-center mb-2 text-primary">{I18n.translations[i18n.locale]['formLabel']}</h2>
+      <h2 class="text-2xl font-bold text-center mb-2 text-primary">
+        {I18n.translations[i18n.locale]['formLabel']}
+      </h2>
       <form onSubmit={handleSubmit(submitForm)}>
         <div class="mb-4">
           <Label htmlFor="ethereumAddress" className="text-right text-primary">
-            Ethereum Address
+          {I18n.translations[i18n.locale]['ethereumAddress']}
           </Label>
           <Controller
             name="ethereumAddress"
@@ -62,7 +66,7 @@ export function EthereumForm({ onSendData, isFetching }: FormChildProps): h.JSX.
           className="bg-primary2 text-white p-2 rounded w-full cursor-pointer"
           type="submit"
         >
-          {isFetching ? 'Please wait...' : 'Get Balance'}
+          {isFetching ? `${I18n.translations[i18n.locale]['pleaseWait']}` : `${I18n.translations[i18n.locale]['getBalance']}`}
         </Button>
       </form>
     </div>

@@ -6,9 +6,11 @@ import { loadLocale } from '@/i18n';
 import I18n from 'i18nline';
 import { useI18nContext } from '@/context/i18nContext';
 
+import { Button } from '@/components/ui/button';
+
 // Header component to display the company logo
 export function Header(): h.JSX.Element {
-  const i18n = useI18nContext()
+  const i18n = useI18nContext();
 
   const changeLocale = async (newLocale: string) => {
     // loading the translation file for new locale
@@ -20,14 +22,32 @@ export function Header(): h.JSX.Element {
     I18n.translations = localeData;
   };
   return (
-    <header class="bg-white p-2 border-white shadow-md" data-testid="header">
-      <Image src={tatumLogo} alt="Tatum" height={48} width={48} />
-      <button class="text-primary pr-4" onClick={() => changeLocale('en')}>
-        EN
-      </button>
-      <button class="text-primary" onClick={() => changeLocale('de')}>
-        DE
-      </button>
+    <header
+      class="flex justify-between items-center bg-white p-4 border-white shadow-md"
+      data-testid="header"
+    >
+      <div class="flex items-center">
+        <Image src={tatumLogo} alt="Tatum" height={64} width={64} />
+      </div>
+      <div class="flex items-center">
+        <span class="pr-2 text-primary">{I18n.translations[i18n.locale]['changeLanguage']}</span>
+        <Button
+          className="text-primary cursor-pointer"
+          type="button"
+          variant="ghost"
+          onClick={() => changeLocale('en')}
+        >
+          EN
+        </Button>
+        <Button
+          className="text-primary cursor-pointer"
+          type="button"
+          variant="ghost"
+          onClick={() => changeLocale('de')}
+        >
+          DE
+        </Button>
+      </div>
     </header>
   );
 }

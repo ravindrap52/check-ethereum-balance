@@ -1,8 +1,14 @@
 {
   "cs": {
     "formLabel": "Zkontrolovat zůstatek Ethereum",
-    "pleasewait": "Prosím, čekejte...",
+    "pleaseWait": "Prosím, čekejte...",
     "pageNotFoundMessage": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
-    "Page Not Found": "Stránka nenalezena"
+    "pageNotFound": "Stránka nebyla nalezena",
+    "changeLanguage": "Změnit jazyk:",
+    "home": "Přejít na domovskou stránku",
+    "getBalance": "Získat zůstatek",
+    "ethereumAddress": "Ethereum adresa",
+    "currentBalance": "Váš aktuální zůstatek je:",
+    "noBalance": "Pro tuto adresu není k dispozici žádný zůstatek."
   }
 }
