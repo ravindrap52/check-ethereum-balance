@@ -20,7 +20,7 @@ export const getBalanceByAsset = (data: AddressBalance[], currency: string): str
     const locale = navigator.language;
 
     // currency code based on user's locale
-    const currencyCode = currencyMapping[locale] || currencyMapping[locale.split('-')[0]] || 'USD';
+    const currencyCode = currencyMapping[I18n.locale]  || 'USD';
 
     // Formatting the balance
     const formattedBalance = new Intl.NumberFormat(locale, {
