@@ -1,5 +1,8 @@
 {
   "de": {
-    "hello": "willkomen"
+    "formLabel": "Ethereum-Guthaben überprüfen",
+    "pleasewait": "Bitte warten...",
+    "pageNotFoundMessage": "Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.",
+    "Page Not Found": "Seite nicht gefunden"
   }
 }

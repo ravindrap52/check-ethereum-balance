@@ -1,5 +1,8 @@
 {
   "en": {
-    "hello": "test"
+    "formLabel": "Check Ethereum Balance",
+    "pleasewait": "Please wait...",
+    "pageNotFoundMessage": "The page you're looking for doesn't exist or has been moved.",
+    "Page Not Found": "Page Not Found"
   }
 }

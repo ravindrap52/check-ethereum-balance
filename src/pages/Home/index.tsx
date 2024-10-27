@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { h } from 'preact';
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from 'preact/hooks';
 
 import { EthereumForm } from './form';
 import { Skeleton } from '@/components/ui/skeleton';
