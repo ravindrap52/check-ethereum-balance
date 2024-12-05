@@ -57,6 +57,8 @@ To run the tests, execute:
 npm run test
 ```
 
+## For API Key, Singup in to tatum.io, and add the key in .env files
+
 ### Ethereum Address for testing
 
 ```bash
